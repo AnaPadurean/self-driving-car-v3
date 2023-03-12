@@ -35,14 +35,14 @@ class Visualizer {
         ctx.beginPath();
         ctx.moveTo(Visualizer.#getNodeX(inputs, i, left, right), bottom);
         ctx.lineTo(Visualizer.#getNodeX(outputs, j, left, right), top);
-        ctx.lineWidth = 2;
+        ctx.lineWidth = 2.5;
 
         ctx.strokeStyle = getRGBA(weights[i][j]);
         ctx.stroke();
       }
     }
 
-    const nodeRadius = 19;
+    const nodeRadius = 25;
 
     for (let i = 0; i < inputs.length; i++) {
       const x = Visualizer.#getNodeX(inputs, i, left, right);
